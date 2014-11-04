@@ -6,7 +6,7 @@ ruby '2.1.3'
 gem 'rails', '4.1.6'
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -55,6 +55,7 @@ gem 'carmen-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'ckeditor'
+gem 'compass-rails'
 
 gem 'capistrano'
 gem 'capistrano-bundler'
