@@ -21,5 +21,4 @@
  *= require 'nprogress'
  *= require 'jquery.inputfile'
  *= require_tree
- *= require_self
  */
