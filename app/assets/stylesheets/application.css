@@ -11,9 +11,7 @@
  * file per style scope.
  *
  *= require twitter-bootstrap-static/bootstrap
- *= require twitter-bootstrap-static/fontawesome
  *= require jquery-ui/datepicker
- *= require font-awesome
  *= require 'theme'
  *= require 'colour'
  *= require 'prettyPhoto'
