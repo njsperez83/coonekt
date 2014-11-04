@@ -1338,8 +1338,8 @@ span.nav-close:before { content: "\f00d"; }
 	font: 40px 'Lato', sans serif;
 	font-weight: 700;
 	margin: 13px 0 5px;
-	text-a /* lign: center;
-	col*/or: #555;
+	text-align: center;
+	color: #555;
 }
 .pricing-header-row-1 {
 	text-align: center;
@@ -1347,7 +1347,7 @@ span.nav-close:before { content: "\f00d"; }
 	padding: 5px 0 12px;
 	-webkit-border-radius: 6px 6px 0px 0px;
     -moz-border-radius: 6px 6px 0px 0px;
-	border /* -radius: 6px 6px 0*/px 0px;
+	border-radius: 6px 6px 0*/px 0px;
 }
 .pricing-header-row-2 {
 	text-align: center;
@@ -1355,7 +1355,7 @@ span.nav-close:before { content: "\f00d"; }
 	margin-top: 0px;
 	padding: 10px 0 ;
 	border-top: none;
-	backgr /* ound: #E9E6E1!impo*/rtant; 
+	background: #E9E6E1!important; 
 }
 .pricing-content-row-odd { font-size: 14px; padding: 8px 0; background: #f0eee9!important;  }
 .pricing-content-row-even { font-size: 14px; padding: 8px 0; background: #E9E6E1!important; }
