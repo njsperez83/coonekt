@@ -55,6 +55,7 @@ gem 'carmen-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'ckeditor'
+gem 'bootstrap-sass'
 
 gem 'capistrano'
 gem 'capistrano-bundler'
