@@ -8,7 +8,7 @@ role :app, %w{deploy@106.187.101.218}
 role :web, %w{deploy@106.187.101.218}
 role :db,  %w{deploy@106.187.101.218}
 
-
+set :stage, :production
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
