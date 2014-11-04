@@ -12,6 +12,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 #set :keep_releases, 5
 
+load 'deploy/assets'
+
 namespace :deploy do
 
   namespace :assets do
