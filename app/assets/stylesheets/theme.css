@@ -1641,7 +1641,7 @@ span.nav-close:before { content: "\f00d"; }
 .container {  padding: 0 15px !important; }
 .btn-navbar { display:block; }
 .nivo { margin-top: 0px!important; }
-#banner { padding-bottom: 25px;!important; }
+#banner { padding-bottom: 25px!important; }
 .logo { float:left;  margin: 35px 20px 0 40px!important; }
 .navbar .nav.pull-right { float: right; margin-right: 0px!important; }
 .btn-blog1 { width:70px; padding:5px; font-size:11px; }
