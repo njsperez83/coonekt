@@ -20,4 +20,6 @@
  *= require 'zocial'
  *= require 'nprogress'
  *= require 'jquery.inputfile'
+ *= require_tree
+ *= rquire_self
  */
