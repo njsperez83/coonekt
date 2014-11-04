@@ -1824,4 +1824,33 @@ span.nav-close:before { color: #555; }
 	margin-top: 100px;
 }
 
+.zocial,
+a.zocial {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	position: relative;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.zocial:before {
+	float: left;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0 auto 0 ;
+	text-align: center;
+	text-decoration: none;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.zocial:active { outline: none; /* outline is visible on :focus */ }
 
