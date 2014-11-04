@@ -14,8 +14,7 @@
  *= require twitter-bootstrap-static/fontawesome
  *= require jquery-ui/datepicker
  *= require font-awesome
- *= require 'colour'
- *= require 'zocial'
+ *= require 'theme'
  *= require 'nprogress'
  *= require 'jquery.inputfile'
  *= require_tree
