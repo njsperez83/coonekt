@@ -55,7 +55,7 @@ gem 'carmen-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'ckeditor'
-gem 'sprockets'
+
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
