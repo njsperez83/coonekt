@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+%html{ :lang => 'en' }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale = 1.0' }
+    %meta{ :name => 'description', :content => '' }
+    %meta{ :name => 'author', :content => '' }
+    = display_meta_tags :site => 'Coonekt.com'
+
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:400,700,300'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag :modernizr
+    = csrf_meta_tags
+
+  - if params[:controller].eql? 'home' and params[:action].eql? 'index'
+
+    %body{ :style => "background: #000000 url(assets/background_photo_default.jpg); background-size:100% auto; background-repeat: no-repeat; background-attachment:fixed;" }
+      = render 'layouts/header_style1'
+      = yield
+      = render 'layouts/footer_style1'
+
+  - elsif params[:controller].eql? 'users' and params[:action].eql? 'show' or params[:action].eql? 'index'
+
+    - unless @user.background_photo.present?
+      - background_photo = '/assets/background_photo_default.jpg'
+    - else
+      - background_photo = @user.background_photo
+
+    %body{ :style => "background: #000000 url(#{background_photo}); background-size:100% auto; background-repeat: no-repeat; background-attachment:fixed;" }
+      = render 'layouts/header_style1'
+      = yield
+      = render 'layouts/footer_style1'
+
+  - else
+
+    %body
+      = render 'layouts/header'
+      = yield
+      = render 'layouts/footer'

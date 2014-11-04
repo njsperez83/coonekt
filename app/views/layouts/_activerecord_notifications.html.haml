@@ -1,0 +1,6 @@
+- if active_record
+  .alert.alert-danger.fade.in
+    %button.close{ 'data-dismiss' => 'alert' } x
+    - active_record.each do |msg|
+      %li
+        = msg

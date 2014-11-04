@@ -1,0 +1,20 @@
+development:
+  cloud_name: njsperez83
+  api_key: '567886115136737'
+  api_secret: 3RqitFPTkLZ09NVyNVpLhjDQotk
+  enhance_image_tag: true
+  static_image_support: false
+
+production:
+  cloud_name: njsperez83
+  api_key: '567886115136737'
+  api_secret: 3RqitFPTkLZ09NVyNVpLhjDQotk
+  enhance_image_tag: true
+  static_image_support: true
+
+test:
+  cloud_name: njsperez83
+  api_key: '567886115136737'
+  api_secret: 3RqitFPTkLZ09NVyNVpLhjDQotk
+  enhance_image_tag: true
+  static_image_support: false

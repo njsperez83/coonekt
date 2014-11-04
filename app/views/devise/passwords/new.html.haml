@@ -1,0 +1,17 @@
+.container.wrapper.pad30
+
+  .panel.panel-info.form
+    .panel-heading
+      %h3.panel-title
+        Forgot Password
+    .panel-body
+      = render 'layouts/form_for_notifications'
+
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        .form-group
+          = f.email_field :email, autofocus: true, class: 'form-control input-lg'
+        .form-group
+          = f.submit "Send me reset password instructions", class: 'btn btn-primary', data: { disable_with: "Sending..." }
+
+        = render 'devise/shared/links'
+

@@ -1,0 +1,35 @@
+%h1.title
+  = @user.first_name
+  = @user.last_name
+
+%h2{ :style => 'color:#D0A63B;' }
+  - if @user.headline.present?
+    = @user.headline
+.clear
+
+- if @user.country.present?
+  - @country = Carmen::Country.coded(@user.country)
+  %i.fa.fa-map-marker{ :style => 'margin-right: 10px;' }
+  = link_to @country.name
+.clear
+
+- if @user.work.present?
+  %i.fa.fa-suitcase{ :style => 'margin-right: 7px;' }
+  = @user.work
+.clear
+
+- if @user.education.present?
+  %i.fa.fa-certificate{ :style => 'margin-right: 7px;' }
+  = @user.education
+.clear
+
+- if @user.interests.present?
+  %i.fa.fa-tags{ :style => 'margin-right: 4px;' }
+  = @user.interests
+.clear
+
+%hr
+- if @user.biography.present?
+  .profile-biography{ :style => 'overflow: auto; max-height: 300px;' }
+    = raw(@user.biography)
+

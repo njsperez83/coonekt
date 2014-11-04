@@ -1,0 +1,56 @@
+- @header = 'The Big Picture of You'
+- @header_sub = 'Make a beautiful page and inspire people to connect with you.'
+- set_meta_tags :title => '',
+                :description => '',
+                :keywords => ''
+.container.wrapper
+  .visible-xs.visible-sm.white{ :style => 'margin-top:150px;' }
+    %h1
+      = @header
+    %h2
+      = @header_sub
+
+  .hidden-xs.hidden-sm.white
+    %h1
+      = @header
+    %h2
+      = @header_sub
+
+  %br
+  = render 'layouts/flash_notifications'
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :class => 'form pull-left' }) do |f|
+
+    .form-group.form-group-lg
+      = f.text_field :first_name, :placeholder => 'First name', :class => 'form-control', :required => true
+
+    .form-group.form-group-lg
+      = f.text_field :last_name, :placeholder => 'Last name', :class => 'form-control', :required => true
+
+    .form-group.form-group-lg
+      %select.form-control.input-lg{ :lgid => "user_gender", :name => "user[gender]", :required => true }
+        %option{ :value => ''} Gender
+        %option{ :value => 'Male' } Male
+        %option{ :value => 'Female' } Female
+
+    .form-group.input-group.input-group-lg
+      %span.input-group-addon
+        %i.fa.fa-birthday-cake
+      = f.date_field :birthday, :placeholder => 'mm/dd/yyyy', :class => 'form-control input-lg', :id => 'birthday'
+
+    .form-group.input-group.input-group-lg
+      %span.input-group-addon
+        %i.fa.fa-envelope
+      = f.email_field :email, placeholder: 'Email address', class: 'form-control input-lg', :required => true
+
+    .form-group.input-group.input-group-lg
+      %span.input-group-addon
+        %i.fa.fa-lock
+      = f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control input-lg', :required => true
+
+    .form-group.input-group.input-group-lg
+      %span.input-group-addon
+        %i.fa.fa-lock
+      = f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirm Password', class: 'form-control input-lg', :required => true
+
+    = f.submit "Join for FREE", class: 'btn btn-primary btn-form btn-lg'
+

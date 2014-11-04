@@ -1,0 +1,17 @@
+.container.wrapper.pad30
+
+  .panel.panel-info.form
+    .panel-heading
+      %h3.panel-title
+        Resend confirmation instructions
+        = link_to 'learn more', root_path
+    .panel-body
+      = render 'layouts/form_for_notifications'
+
+      = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+        .form-group
+          = f.email_field :email, autofocus: true, required: true, class: 'form-control input-lg'
+
+        = f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg', data: { disable_with: "Resending..." }
+
+        = render "devise/shared/links"

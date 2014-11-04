@@ -1,0 +1,29 @@
+.container.wrapper.pad30
+
+  .panel.panel-info.form
+    .panel-heading
+      %h3.panel-title
+        Please Log In, or Sign Up
+    .panel-body
+      = render 'layouts/flash_notifications'
+
+      = form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :role => 'form' }) do |f|
+
+        .form-group.input-group.input-group-lg
+          %span.input-group-addon
+            %i.fa.fa-envelope
+          = f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control input-lg', :required => true
+
+        .form-group.input-group.input-group-lg
+          %span.input-group-addon
+            %i.fa.fa-lock
+          = f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control input-lg', :required => true
+
+        .form-group
+          - if devise_mapping.rememberable?
+            = f.check_box :remember_me
+            Remember me
+
+        = f.submit "Log In", class: 'btn btn-primary btn-lg', data: { disable_with: "Logging In..." }
+
+        = render "devise/shared/links"

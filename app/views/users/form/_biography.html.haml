@@ -1,0 +1,54 @@
+= form_for @user, :html => { :class => 'col-xs-8' } do |f|
+  = f.hidden_field :page, :value => 'biography'
+
+  - if @user.user_name.blank?
+    .alert.alert-warning
+      %i.fa.fa-info-circle
+      Your profile is private until you have saved your User name.
+
+
+  %label USER NAME
+  - if @user.user_name.blank?
+    (Suggestions:
+    = to_sentence(@user.first_name, @user.last_name, @user.email, @user.birthday)
+    )
+  .form-group.input-group.input-group-lg
+    %span.input-group-addon
+      Coonekt.com/
+    = f.text_field :user_name, class: 'form-control'
+
+  %label NAME
+  .form-group
+    = f.text_field :first_name
+    = f.text_field :last_name
+
+  %label HEADLINE
+  .form-group
+    =f.text_field :headline, class: 'form-control input-lg'
+
+  %label BIOGRAPHY
+  .form-group
+    = f.cktext_area :biography
+
+  %label LOCATION
+  .form-group
+    = f.country_select :country, {priority: %w(PH), prompt: 'Where are you from?'}, { class: 'form-control input-lg' }
+
+  #user_subregion_wrapper
+
+    = render partial: 'layouts/subregion_select', locals: {parent_region: f.object.country }
+
+  %label EDUCATION
+  .form-group
+    = f.text_field :education, class: 'form-control input-lg'
+
+  %label WORK
+  .form-group
+    = f.text_field :work, class: 'form-control input-lg'
+
+  %label INTERESTS (separated by commas)
+  .form-group
+    = f.text_field :interests, class: 'form-control input-lg'
+
+
+  = f.submit 'Save', class: 'btn btn-primary',data: { disable_with: "Saving..." }

@@ -1,0 +1,10 @@
+- parent_region ||= params[:parent_region]
+- country = Carmen::Country.coded(parent_region)
+
+- if country.nil?
+
+- elsif country.subregions?
+  .form-control
+    = subregion_select(:user, :subregion, parent_region, { class: 'form-control input-lg' })
+- else
+  = f.text_field(:user, :subregion)

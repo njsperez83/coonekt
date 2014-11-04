@@ -1,0 +1,42 @@
+= form_for @user do |f|
+  = f.hidden_field :page, :value => 'photo_avatar'
+  %label Profile Photo
+  .form-group
+    = f.file_field(:avatar, :required => true)
+
+    = f.submit 'Upload', class: 'btn btn-success', data: { disable_with: "Uploading..." }
+
+- unless @user.avatar.blank?
+  = image_tag @user.avatar_url, :class => 'img-thumbnail'
+
+%hr
+
+%h1 Upload an awesome photo that sets you apart from the rest.
+
+= form_for @user do |f|
+  = f.hidden_field :page, :value => 'photo_background'
+  %label Background Photo
+  .form-group
+    = f.file_field(:background_photo, :required => true)
+    = f.submit 'Upload', class: 'btn btn-success', data: { disable_with: "Uploading..." }
+
+Current Background
+- unless @user.background_photo.blank?
+  =#image_tag @user.background_image_url(:thumbnail)
+
+  = image_tag @user.background_photo_url, :class => 'img-thumbnail'
+
+%hr
+
+Uploaded Backgrounds
+.row
+  - if @user_photo.present?
+    - @user_photo.each do |photo|
+      .col-xs-12.col-sm-6.col-md-3.pad30
+        = image_tag photo.small
+        .item_description
+          %a{ :href => user_photos_update_path(photo.id), :class => 'btn btn-info', data: {disable_with: '...' }}
+            %i.fa.fa-level-up
+  - else
+    .col-xs-12
+      None yet :)

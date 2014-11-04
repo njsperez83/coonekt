@@ -1,0 +1,7 @@
+- if @user.errors.any?
+  .alert.alert-danger.fade.in
+    %button.close{ 'data-dismiss' => 'alert' } x
+    - @user.errors.full_messages.each do |message|
+      %li
+        = message
+

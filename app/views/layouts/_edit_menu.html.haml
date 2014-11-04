@@ -1,0 +1,13 @@
+.col-md-3
+  %h2
+    Profile Elements
+
+  %ul.list-group
+    %li.list-group-item
+      = link_to 'Photo', users_edit_path(page: 'photo')
+    %li.list-group-item
+      = link_to 'Biography', users_edit_path(page: 'biography')
+    %li.list-group-item
+      = link_to 'Contact', users_edit_path(page: 'contact')
+    %li.list-group-item
+      = link_to 'Links', users_edit_path(page: 'links')
