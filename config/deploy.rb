@@ -22,14 +22,14 @@ namespace :deploy do
       CMD
     end
   end
- 
+
   desc "Symlink shared configs and folders on each release."
   task :symlink_configs do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/application.yml #{release_path}/config/application.yml"
     run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
   end
-end
+
    desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
