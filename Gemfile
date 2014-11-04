@@ -56,7 +56,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'ckeditor'
 gem 'bootstrap-sass'
-
+gem 'capistrano-faster-assets', '~> 1.0'
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
