@@ -4,6 +4,8 @@ set :application, 'coonekt'
 set :repo_url, 'https://github.com/njsperez83/coonekt.git'
 
 set :deploy_to, '/home/deploy/coonekt'
+set :user, "deploy"
+set :use_sudo, true
 
 #set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
