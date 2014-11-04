@@ -123,7 +123,7 @@ a.zocial {
 .zocial.quora:before {content: "q";}
 .zocial.reddit:before {content: ">"; }
 .zocial.rss:before {content: "R";}
-.zocial.scribd:before {content: "}"; }
+.zocial.scribd:before {content: ";} }
 .zocial.skype:before {content: "S";}
 .zocial.smashing:before {content: "*";}
 .zocial.songkick:before {content: "k";}
