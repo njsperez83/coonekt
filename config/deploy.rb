@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'coonekt'
-set :repo_url, 'github.com/njsperez83/coonekt.git'
+set :repo_url, 'https://github.com/njsperez83/coonekt.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
