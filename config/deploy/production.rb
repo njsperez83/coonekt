@@ -7,7 +7,7 @@ set :stage, :production
 # Don't declare `role :all`, it's a meta role
 role :app, %w{deploy@106.187.101.218}
 role :web, %w{deploy@106.187.101.218}
-role :db,  %w{deploy@106.187.101.218}, :no_release => true
+role :db,  %w{deploy@106.187.101.218}
 
 # Extended Server Syntax
 # ======================
