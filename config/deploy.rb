@@ -7,7 +7,7 @@ set :deploy_to, '/home/deploy/coonekt'
 set :user, "deploy"
 set :use_sudo, true
 
-#set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 #set :keep_releases, 5
