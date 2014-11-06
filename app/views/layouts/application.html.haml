@@ -13,8 +13,8 @@
     = csrf_meta_tags
 
   - if params[:controller].eql? 'home' and params[:action].eql? 'index'
-
-    %body{ :style => "background: #000000 url(/assets/background_photo_default.jpg); background-size:100% auto; background-repeat: no-repeat; background-attachment:fixed;" }
+    - default_background_photo = '/assets/background_photo_default.jpg'
+    %body{ :style => "background: #000000 url(#{default_background_photo}); background-size:100% auto; background-repeat: no-repeat; background-attachment:fixed;" }
       = render 'layouts/header_style1'
       = yield
       = render 'layouts/footer_style1'
