@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/capistrano/rvm.git
+  revision: 9cfef39cf0022839dca6b5b330dfefeb5fc363e7
+  specs:
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 3edf24de985d946f16a2781644289cfdc51ba95b
   specs:
@@ -74,9 +82,6 @@ GEM
     capistrano-rails (1.1.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     carmen (1.0.1)
       unicode_utils (~> 1.4.0)
     carmen-rails (1.0.1)
@@ -289,7 +294,7 @@ DEPENDENCIES
   capistrano (~> 3.1.0)
   capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.1.1)
-  capistrano-rvm
+  capistrano-rvm!
   carmen-rails
   carrierwave
   ckeditor
