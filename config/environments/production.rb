@@ -77,4 +77,18 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   GA.tracker = "UA-56499600-1"
+
+  #Mailer
+  Rails.application.routes.default_url_options[:host] = 'coonekt.com'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address    => "smtp.zoho.com",
+    :port       => 465,
+    :user_name  => 'connect@coonekt.com',
+    :password   => 'P@$$W0rd',
+    :authentication       => ':plain',
+    :ssl => true,
+    :tls => true
+  }
+
 end

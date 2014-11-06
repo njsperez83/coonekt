@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @custom_profiles = 'assets/profile.jpg'
+    ActionMailer::Base.mail(:from => "connect@coonekt.com", :to => "njsperez@icloud.com", :subject => "ZOHO TEST", :body => 'Heeeee').deliver
   end
 end
