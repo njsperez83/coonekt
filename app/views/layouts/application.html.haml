@@ -10,6 +10,7 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:400,700,300'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag :modernizr
+    = analytics_init if Rails.env.production?
     = csrf_meta_tags
 
   - if params[:controller].eql? 'home' and params[:action].eql? 'index'

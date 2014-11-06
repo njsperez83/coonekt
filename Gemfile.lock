@@ -122,6 +122,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
+    google-analytics-rails (0.0.6)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -302,6 +303,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   font-awesome-rails
+  google-analytics-rails
   haml
   haml-rails
   jbuilder (~> 2.0)
