@@ -86,7 +86,7 @@ Rails.application.configure do
     :port       => 465,
     :user_name  => 'connect@coonekt.com',
     :password   => 'P@$$W0rd',
-    :authentication       => ':login',
+    :authentication       => :plain,
     :ssl => true,
     :tls => true
   }
