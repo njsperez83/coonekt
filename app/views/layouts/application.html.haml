@@ -13,7 +13,7 @@
     = csrf_meta_tags
 
   - if params[:controller].eql? 'home' and params[:action].eql? 'index'
-    - default_background_photo = '/assets/background_photo_default.jpg'
+    - default_background_photo = 'http://res.cloudinary.com/njsperez83/image/upload/v1415260640/background_photo_default_xpq1sx.jpg'
     %body{ :style => "background: #000000 url(#{default_background_photo}); background-size:100% auto; background-repeat: no-repeat; background-attachment:fixed;" }
       = render 'layouts/header_style1'
       = yield
@@ -22,7 +22,7 @@
   - elsif params[:controller].eql? 'users' and params[:action].eql? 'show' or params[:action].eql? 'index'
 
     - unless @user.background_photo.present?
-      - background_photo = '/assets/background_photo_default.jpg'
+      - background_photo = 'http://res.cloudinary.com/njsperez83/image/upload/v1415260640/background_photo_default_xpq1sx.jpg'
     - else
       - background_photo = @user.background_photo
 
