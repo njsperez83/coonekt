@@ -37,10 +37,9 @@ module UsersHelper
     email = last_name + email.split("@").first
     email = email.gsub!(/[^0-9A-Za-z]/, '')
 
-    string = name + ' ' + full_name + ' ' + email + ' ' + first_name_birthday
+    string = name.to_s + ' ' + full_name.to_s + ' ' + email.to_s + ' ' + first_name_birthday.to_s
     string = string.downcase
     string = string.gsub(' ', ', ')
-
     return string
   end
 end

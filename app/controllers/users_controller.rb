@@ -42,9 +42,9 @@ class UsersController < ApplicationController
       @user.skip_user_name_validation = true
 
       if @user.update_attributes(photo_avatar_params)
-        current_avatar = cloudinary_image_id(current_user.avatar)
 
-        if @user.avatar.present?
+        if current_user.avatar.present?
+          current_avatar = cloudinary_image_id(current_user.avatar)
           Cloudinary::Api.delete_resources(current_avatar)
         end
         redirect_to users_edit_path(:page => 'dashboard'), :notice => "#{@page.capitalize} updated!"
