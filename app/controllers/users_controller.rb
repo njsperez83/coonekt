@@ -44,7 +44,7 @@ class UsersController < ApplicationController
       if @user.update_attributes(photo_avatar_params)
         current_avatar = cloudinary_image_id(current_user.avatar)
 
-        if current_avatar.present?
+        if @user.avatar.present?
           Cloudinary::Api.delete_resources(current_avatar)
         end
         redirect_to users_edit_path(:page => 'dashboard'), :notice => "#{@page.capitalize} updated!"
