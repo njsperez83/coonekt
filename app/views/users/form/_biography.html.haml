@@ -1,4 +1,4 @@
-= form_for @user, :html => { :class => 'col-xs-8' } do |f|
+= form_for @user, :html => { :class => '' } do |f|
   = f.hidden_field :page, :value => 'biography'
 
   - if @user.user_name.blank?
@@ -12,19 +12,20 @@
     (Suggestions:
     = to_sentence(@user.first_name, @user.last_name, @user.email, @user.birthday)
     )
-  .form-group.input-group.input-group-lg
+  .form-group.input-group.input-group-sm
     %span.input-group-addon
       Coonekt.com/
-    = f.text_field :user_name, class: 'form-control'
+    = f.text_field :user_name, class: 'form-control input-sm'
 
   %label NAME
   .form-group
-    = f.text_field :first_name
-    = f.text_field :last_name
+    = f.text_field :first_name, class: 'input-sm'
+    %br
+    = f.text_field :last_name, class: 'input-sm'
 
   %label HEADLINE
   .form-group
-    =f.text_field :headline, class: 'form-control input-lg'
+    =f.text_field :headline, class: 'form-control input-sm'
 
   %label BIOGRAPHY
   .form-group
@@ -32,7 +33,7 @@
 
   %label LOCATION
   .form-group
-    = f.country_select :country, {priority: %w(PH), prompt: 'Where are you from?'}, { class: 'form-control input-lg' }
+    = f.country_select :country, {priority: %w(PH), prompt: 'Where are you from?'}, { class: 'form-control input-sm' }
 
   #user_subregion_wrapper
 
@@ -40,15 +41,15 @@
 
   %label EDUCATION
   .form-group
-    = f.text_field :education, class: 'form-control input-lg'
+    = f.text_field :education, class: 'form-control input-sm'
 
   %label WORK
   .form-group
-    = f.text_field :work, class: 'form-control input-lg'
+    = f.text_field :work, class: 'form-control input-sm'
 
   %label INTERESTS (separated by commas)
   .form-group
-    = f.text_field :interests, class: 'form-control input-lg'
+    = f.text_field :interests, class: 'form-control input-sm'
 
 
   = f.submit 'Save', class: 'btn btn-primary',data: { disable_with: "Saving..." }
