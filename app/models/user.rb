@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :user_name, on: :update, unless: :skip_user_name_validation
   validates_format_of     :user_name, :with => /\A(?=.*[a-z])[a-z\d]+\Z/i, on: :update, unless: :skip_user_name_validation
 
+  before_save :to_lower_user_name
+
   mount_uploader :avatar, AvatarPhotoUploader
 
   mount_uploader :background_photo, BackgroundPhotoUploader
@@ -55,6 +57,11 @@ class User < ActiveRecord::Base
 
     return user
 
+  end
+
+  private
+  def to_lower_user_name
+    self.user_name = self.user_name.downcase
   end
 
 end
